@@ -1,0 +1,32 @@
+#!/bin/bash -e
+##
+## summary of how this script can be called:
+##        * <new-preinst> install
+##        * <new-preinst> install <old-version>
+##        * <new-preinst> upgrade <old-version>
+##        * <old-preinst> abort-upgrade <new-version>
+##
+
+. /usr/share/debconf/confmodule
+
+# creating blues-identity group if he isn't already there
+if ! getent group blues-identity >/dev/null; then
+    # Adding system group: blues-identity.
+    addgroup --system blues-identity >/dev/null
+fi
+
+# creating blues-identity user if he isn't already there
+if ! getent passwd blues-identity >/dev/null; then
+    # Adding system user: blues-identity.
+    adduser \
+      --system \
+          --disabled-login \
+      --ingroup blues-identity \
+      --gecos "identity server" \
+      --shell /bin/false \
+      blues-identity  >/dev/null
+fi
+
+# create log dir
+mkdir -p /var/log/identity
+chown blues-identity:blues-identity /var/log/identity

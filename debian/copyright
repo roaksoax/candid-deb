@@ -1,0 +1,295 @@
+Format: http://dep.debian.net/deps/dep5
+Upstream-Name: blues-identity
+Source: https://github.com/CanonicalLtd/blues-identity
+Copyright: 2014 Canonical Ltd.
+Comment:
+ The blues-identity source package includes a number of other
+ upstream projects in addition to blues-identity itself.
+ .
+ This reflects the static linking approach taken in Go as
+ all dependencies are linked in at build time.
+ .
+ To ease audits and updates of this file, please maintain each upstream
+ project's copyright information in its own separate Files section in
+ alphabetical order of upstream project, so that the data for each
+ upstream project is close together and complete by itself. If an
+ upstream project needs multiple Files sections for its copyright
+ description, then please bundle these together in the same section for
+ that upstream project. So collapsing License sections together across
+ this file is fine, but please do not collapse Files sections across
+ multiple upstream projects, since this causes difficulty when updating
+ this file after individual upstreams change.
+ .
+ Licenses that use template replacements may be duplicated in this
+ file, since different files have different template replacements, and
+ the licenses require that the original text be reproduced. This means
+ that the standard short names cannot be used, since then the text would
+ have to be the same. Instead, this file uses names like
+ BSD-2-clause+Apple and BSD-3-clause+Google to try and retain the intent
+ of dep5 as closely as possible without making it too difficult to keep
+ this file maintained. This use does not appear to be in violation of
+ dep5.
+
+Files: src/code.google.com/p/go.crypto/*
+Comment: Last verified commit 5478be1963aafa9025e9bf0837aff6013eb92e5b
+Copyright: 2009-2014, The Go Authors
+License: BSD-3-clause+Google
+
+Files: src/github.com/juju/errors/*
+Comment: Last verified commit 09734a904adc602da4334cbf29cb4515fbeb8feb
+Copyright: 2013-2014 Canonical Ltd.
+License: LGPL-3 with linking exception
+
+Files: src/github.com/juju/loggo/*
+Comment: Last verified commit 7e8c70b24b80b95b2284f09306aac0bd93588db8
+Copyright: 2013 Canonical Ltd.
+License: LGPL-3+
+
+Files: src/github.com/juju/testing/*
+Comment: Last verified commit 8bdbb45d87dd9724c254eb6afeacd84b127d7e76
+Copyright: 2012-2014 Canonical Ltd.
+License: LGPL-3 with linking exception
+
+Files: src/github.com/juju/testing/checkers/deepequal.go
+       src/github.com/juju/testing/checkers/deepequal_test.go
+Comment: inferred from source code, but license text is not reproduced
+ as required by the license, so reproduced here for compliance. Raised
+ upstream at https://github.com/juju/testing/issues/32
+Copyright: 2009 The Go Authors. All rights reserved.
+License: BSD-3-clause+Google
+
+Files: src/github.com/juju/utils/*
+Comment: Last verified commit cc58beb3a52d3f83f18956596fa8b2feaaa22d12
+Copyright: 2011-2014 Canonical Ltd.
+License: LGPL-3 with linking exception
+
+Files: src/github.com/kisielk/gotool/*
+Comment: Last verified commit 37b67b9f055653df36c7ef6016c4feed95ad87bf
+Copyright: 2013 Kamil Kisiel <kamil@kamilkisiel.net>
+License: Expat
+
+Files: src/gopkg.in/check.v1/*
+Comment: Last verified commit 91ae5f88a67b14891cfd43895b01164f6c120420
+Copyright: 2010-2013 Gustavo Niemeyer <gustavo@niemeyer.net>
+License: BSD-2-clause
+
+Files: src/gopkg.in/check.v1/benchmark.go
+Copyright: 2009 The Go Authors
+License: BSD-3-clause+Google
+
+Files: src/gopkg.in/errgo.v1/*
+Comment: Last verified commit 2cf7b553faddc588f903020c33e71c527d5e0838
+Copyright: 2013 Roger Peppe.
+License: BSD-3-clause
+
+Files: src/gopkg.in/mgo.v2/*
+Comment: Last verified commit dc255bb679efa273b6544a03261c4053505498a4
+Copyright: 2010-2014 - Gustavo Niemeyer <gustavo@niemeyer.net>
+License: BSD-2-clause
+
+Files: src/gopkg.in/yaml.v1/*
+Comment: Last verified commit 1418a9bc452f9cf4efa70307cafcb10743e64a56
+ Upstream is Gustavo Niemeyer, https://github.com/go-yaml/yaml
+ Copyright statement taken from upstream HEAD, since the version used
+ in these sources erroneously omitted the statement, and it has since
+ been corrected.
+Copyright: 2011-2014 Canonical Inc.
+License: LGPL-3 with linking exception
+
+Files: src/gopkg.in/yaml.v1/apic.go
+       src/gopkg.in/yaml.v1/emitterc.go
+       src/gopkg.in/yaml.v1/parserc.go
+       src/gopkg.in/yaml.v1/readerc.go
+       src/gopkg.in/yaml.v1/scannerc.go
+       src/gopkg.in/yaml.v1/writerc.go
+       src/gopkg.in/yaml.v1/yamlh.go
+       src/gopkg.in/yaml.v1/yamlprivateh.go
+Copyright: 2006 Kirill Simonov
+License: Expat
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+   http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the full text of the Apache License, Version 2.0 can
+ be found in the file `/usr/share/common-licenses/Apache-2.0'.
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-2-clause+Apple
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice,
+ this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation
+ and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY APPLE INC. AND ITS CONTRIBUTORS "AS IS" AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL APPLE INC. OR ITS CONTRIBUTORS BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+     * Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright notice,
+       this list of conditions and the following disclaimer in the documentation
+       and/or other materials provided with the distribution.
+     * Neither the name of the copyright holder nor the names of its
+       contributors may be used to endorse or promote products derived from
+       this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause+Google
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+    * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following disclaimer
+ in the documentation and/or other materials provided with the
+ distribution.
+    * Neither the name of Google Inc. nor the names of its
+ contributors may be used to endorse or promote products derived from
+ this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+License: LGPL-3
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation, version 3.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+ .
+ See both COPYING and COPYING.LESSER for the full terms of the GNU Lesser
+ General Public License.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
+
+License: LGPL-3 with linking exception
+ This software is licensed under the LGPLv3, included below.
+ .
+ As a special exception to the GNU Lesser General Public License version 3
+ ("LGPL3"), the copyright holders of this Library give you permission to
+ convey to a third party a Combined Work that links statically or dynamically
+ to this Library without providing any Minimal Corresponding Source or
+ Minimal Application Code as set out in 4d or providing the installation
+ information set out in section 4e, provided that you comply with the other
+ provisions of LGPL3 and provided that you meet, for the Application the
+ terms and conditions of the license(s) which apply to the Application.
+ .
+ Except as stated in this special exception, the provisions of LGPL3 will
+ continue to comply in full to this Library. If you modify this Library, you
+ may apply this exception to your version of this Library, but you are not
+ obliged to do so. If you do not wish to do so, delete this exception
+ statement from your version. This exception does not (and cannot) modify any
+ license terms which apply to the Application, with which you must still
+ comply.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
+
+License: LGPL-3+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation, either version 3 of the License, or (at your option) any
+ later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+ .
+ See both COPYING and COPYING.LESSER for the full terms of the GNU Lesser
+ General Public License.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
