@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -ex
+
+echo "Testing idserver usage: "
+idserver
+echo "OK"

@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export GOPATH:=$(CURDIR)
+export PATH:=$(GOPATH)/bin:$(PATH)
+
+%:
+	dh $@
+
+COMMON_FLAGS:= -x -v -work
+
+override_dh_auto_install:
+	go install $(COMMON_FLAGS) github.com/CanonicalLtd/blues-identity/cmd/idserver
+	# It is tempting to run go test here. However, that would require the
+	# PPA build server to install mongodb. Instead, go test is run in 
+	# buildpackage.sh before building the source package.
+	dh_install bin/idserver usr/bin/
+	cp src/github.com/CanonicalLtd/blues-identity/cmd/idserver/config.yaml config.yaml.sample
+	dh_install config.yaml.sample etc/blues-identity/
+	dh_auto_install
+
+override_dh_auto_clean:
+	rm -rf pkg bin /tmp/go-build*
+	dh_auto_clean
+
+# Don't strip golang compiled binaries as this does
+# not function correctly
+override_dh_strip:
+	:
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
+
+override_dh_gencontrol:
+	dh_gencontrol -- $(DB_DEP)
