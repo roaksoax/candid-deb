@@ -38,7 +38,7 @@ Run these commands from the root of a`blues-identity-deb` branch.
 
 ## run buildpackage.sh with the release argument
 
-    ./buildpackage.sh release
+    ./buildpackage.sh -vr
 
 This will update the version values in
 github.com/CanonicalLtd/blues-browser/version/version.go to match the current 
