@@ -36,14 +36,10 @@ dch -v ${VERSION} 'autobuild: new commit' -D trusty
 
 fi
 
-# TODO(mhilton) uncomment this when blues-identity has a version package similar to charmstore.
-#GIT_COMMIT=`git --git-dir ${GOPATH}/src/github.com/CanonicalLtd/blues-identity/.git rev-parse --verify HEAD`
-#PKG=github.com/CanonicalLtd/blues-identity
-#VERSION_PKG=${PKG}/version
-#mkdir -p src_version/src/${VERSION_PKG}
-#cp ${GOPATH}/src/${VERSION_PKG}/*.go ${GOPATH}/src_version/src/${VERSION_PKG}
-#cp ${GOPATH}/src/${PKG}/*.go src_version/src/${PKG}
-#gofmt -w -r "unknownVersion -> Version{GitCommit: \"${GIT_COMMIT}\", Version: \"${VERSION}\",}" ${GOPATH}/src_version/src/${VERSION_PKG}/version.go
+GIT_COMMIT=`git --git-dir ${GOPATH}/src/github.com/CanonicalLtd/blues-identity/.git rev-parse --verify HEAD`
+PKG=github.com/CanonicalLtd/blues-identity
+VERSION_PKG=${PKG}/version
+gofmt -r "unknownVersion -> Version{GitCommit: \"${GIT_COMMIT}\", Version: \"${VERSION}\",}" ${GOPATH}/src/${VERSION_PKG}/init.go.tmpl > ${GOPATH}/src/${VERSION_PKG}/init.go
 
 # Build the source package.
 dpkg-buildpackage -rfakeroot -d -S -us -uc
