@@ -1,3 +1,9 @@
+blues-identity (0.0.2) trusty; urgency=medium
+
+  * Initial Release 
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Tue, 13 Jan 2015 17:24:57 +0000
+
 blues-identity (0.0.0) trusty; urgency=medium
 
   * Pre-release version.
