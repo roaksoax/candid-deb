@@ -1,14 +1,18 @@
 description "TheBlues Identity Service"
 author "Juju Team <juju@lists.ubuntu.com>"
-#start on runlevel [2345]
-#stop on runlevel [!2345]
+start on runlevel [2345]
+stop on runlevel [!2345]
 respawn
 
 setuid blues-identity
 setgid blues-identity
 
-script
-    if [ -r /etc/blues-identity/config.yaml ]; then
-        exec idserver /etc/blues-identity/config.yaml
+pre-start script
+    if [ ! -r /etc/blues-identity/config.yaml ]; then
+        stop ; exit 0
     fi
+end script
+
+script
+    exec idserver /etc/blues-identity/config.yaml
 end script
