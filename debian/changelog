@@ -1,3 +1,10 @@
+blues-identity (0.0.3) trusty; urgency=medium
+
+  * improved authorization
+  * improved USSO compatibility
+
+ -- Jay Wren <jay.wren@canonical.com>  Tue, 10 Feb 2015 12:13:30 -0500
+
 blues-identity (0.0.2) trusty; urgency=medium
 
   * Initial Release 
