@@ -1,3 +1,9 @@
+blues-identity (0.0.3+1oops1) trusty; urgency=medium
+
+  * fix upstart script
+
+ -- Jay Wren <jay.wren@canonical.com>  Fri, 13 Feb 2015 08:49:40 -0500
+
 blues-identity (0.0.3) trusty; urgency=medium
 
   * improved authorization
