@@ -1,3 +1,9 @@
+blues-identity (0.0.4-1) trusty; urgency=medium
+
+  * fix dependencies
+
+ -- Jay Wren <jay.wren@canonical.com>  Fri, 03 Apr 2015 15:58:43 -0400
+
 blues-identity (0.0.4) trusty; urgency=medium
 
   * extended API
