@@ -1,3 +1,10 @@
+blues-identity (0.0.5) trusty; urgency=medium
+
+  * Load groups directly from launchpad
+  * bugfix: mongodb session errors 
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Mon, 20 Apr 2015 12:44:38 +0100
+
 blues-identity (0.0.4-1) trusty; urgency=medium
 
   * fix dependencies
