@@ -1,3 +1,11 @@
+blues-identity (0.0.6) trusty; urgency=medium
+
+  * request logging
+  * is-member-of caveat discharge
+  * remove groups from macaroon 
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Wed, 29 Apr 2015 10:29:26 +0100
+
 blues-identity (0.0.5) trusty; urgency=medium
 
   * Load groups directly from launchpad
