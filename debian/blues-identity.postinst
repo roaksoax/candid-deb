@@ -1,0 +1,6 @@
+if [ -x "/etc/init.d/blues-identity" ]; then
+	update-rc.d blues-identity defaults >/dev/null
+fi
+if [ -x "/etc/init.d/blues-identity" ] || [ -e "/etc/init/blues-identity.conf" ] && [ -r /etc/blus-identity/config.yaml ] ; then
+	invoke-rc.d blues-identity start || exit $?
+fi
