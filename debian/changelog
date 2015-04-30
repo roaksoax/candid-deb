@@ -1,3 +1,9 @@
+blues-identity (0.0.7) trusty; urgency=medium
+
+  * merge groups uploaded with those from launchpad 
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Thu, 30 Apr 2015 09:27:35 +0100
+
 blues-identity (0.0.6) trusty; urgency=medium
 
   * request logging
