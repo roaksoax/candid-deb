@@ -1,3 +1,12 @@
+blues-identity (0.0.8) trusty; urgency=medium
+
+  * allow USSO OAuth login
+  * stores email md5 hashes for gravatars
+  * support agent login and discharge
+  * support acls and acl protected endpoints
+
+ -- Jay Wren <jay.wren@canonical.com>  Tue, 26 May 2015 15:09:46 -0400
+
 blues-identity (0.0.7) trusty; urgency=medium
 
   * merge groups uploaded with those from launchpad 
