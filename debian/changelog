@@ -1,3 +1,14 @@
+blues-identity (0.1.0) trusty; urgency=medium
+
+  * limit concurrent mongodb sessions
+  * get charm-beta private groups on login
+  * create idmclient library
+  * simplify agent login mechanism
+  * update: OpenID library
+  * bugfix: check successful logins from Ubuntu SSO 
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Mon, 20 Jul 2015 10:26:58 +0100
+
 blues-identity (0.0.9) trusty; urgency=medium
 
   * allow agent user creation 
