@@ -1,3 +1,25 @@
+blues-identity (0.1.1) trusty; urgency=medium
+
+  * Change to use NewInteractionRequiredError for bakery protocol version.
+  * Implement OPTIONS for all endpoints
+  * Move bakery endpoints to top level
+  * Support preflight and the Bakery-Protocol-Version header
+  * Simplify idp configuration, remove Type type
+  * Keystone login on command line using schema.
+  * Using the new bakery protocol version.
+  * Add Access-Control-Allow-Origin header
+  * idmtest: new package (copied from JEM)
+  * Make idps configurable
+  * Keystone auth stackforge
+  * Keystone login
+  * cmd/putagent: new command
+  * Function to create bakery clients that use OAuth authentication
+  * internal/v1: use agent.LoginCookie
+  * Support logging in existing users wihout registration information
+  * idmclient: add permcheck and basic auth support
+
+ -- Fabrice Matrat <fabrice.matrat@canonical.com>  Thu, 17 Sep 2015 12:38:15 +0200
+
 blues-identity (0.1.0) trusty; urgency=medium
 
   * limit concurrent mongodb sessions
