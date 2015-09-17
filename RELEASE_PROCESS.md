@@ -22,6 +22,8 @@ Use `dch` to add these to the `debian/changelog`. This command will start an
 
     dch -v <NEWVERSIONNUMBER> -D trusty
 
+Once done do not forget to push the debian/changelog to github.
+
 ## Create The Release
 
 This debian package builds from the `blues-identity` and source. The repository 
