@@ -1,4 +1,12 @@
-blues-identity (0.1.1) trusty; urgency=medium
+blues-identity (0.1.2) trusty; urgency=medium
+ 
+  * Make macaroon paths relative
+  * Set cookie and macaroon paths correctly
+  * Use bakery for form protocol 
+  
+ -- Fabrice Matrat <fabrice.matrat@canonical.com>  Thu, 24 Sep 2015  09:32:44 +0200
+  
+ blues-identity (0.1.1) trusty; urgency=medium
 
   * Change to use NewInteractionRequiredError for bakery protocol version.
   * Implement OPTIONS for all endpoints
