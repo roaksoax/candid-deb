@@ -9,7 +9,7 @@ export PATH:=$(GOPATH)/bin:$(PATH)
 %:
 	dh $@
 
-COMMON_FLAGS:= -x -v -work
+COMMON_FLAGS:= -x -v
 
 override_dh_auto_install:
 	go install $(COMMON_FLAGS) github.com/CanonicalLtd/blues-identity/cmd/idserver
@@ -22,7 +22,7 @@ override_dh_auto_install:
 	dh_auto_install
 
 override_dh_auto_clean:
-	rm -rf pkg bin /tmp/go-build*
+	rm -rf pkg bin
 	dh_auto_clean
 
 # Don't strip golang compiled binaries as this does
