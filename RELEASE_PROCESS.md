@@ -1,4 +1,4 @@
-## Find the last release
+## Find the last release in blues-identity
 
 We tag release commits with lightweight tags. You can check the last release by
 running `git tag` and finding the largest version number.
@@ -17,18 +17,20 @@ diff since the last release.
 
     git diff $tagname...HEAD
 
-Use `dch` to add these to the `debian/changelog`. This command will start an
-`EDITOR` and allow you to write bullets into the `debian/changelog`.
+In blues-identity-deb, use `dch` to add these to the `debian/changelog`. This
+command will start an `EDITOR` and allow you to write bullets into the
+`debian/changelog`.
 
     dch -v <NEWVERSIONNUMBER> -D trusty
 
-Once done do not forget to push the debian/changelog to github.
+Once done do not forget to make a pull request for the debian/changelog
+modifications on github.  After approved and merge, continue with the next steps.
 
 ## Create The Release
 
-This debian package builds from the `blues-identity` and source. The repository 
-should be tagged with a version. These instructions assume you have already 
-pulled the source for this go packages from previoususe of `buildpackage.sh`.
+This debian package builds from the `blues-identity` and source. The repository
+should be tagged with a version. These instructions assume you have already
+pulled the source for the go package from previous use of `buildpackage.sh`.
 Run these commands from the root of a`blues-identity-deb` branch.
 
     export GOPATH=$(pwd)
@@ -43,8 +45,8 @@ Run these commands from the root of a`blues-identity-deb` branch.
     ./buildpackage.sh -vr
 
 This will update the version values in
-github.com/CanonicalLtd/blues-browser/version/version.go to match the current 
-deb version and current git commit. Note: the blues-identity doesn't currently have 
+github.com/CanonicalLtd/blues-browser/version/version.go to match the current
+deb version and current git commit. Note: the blues-identity doesn't currently have
 this package.
 
 Read the end output of this command carefully. If the previous step did not
@@ -65,8 +67,9 @@ option to pick an email address and sign.
     sudo dpkg -i ../<package that was created>
 
 Check that executables run. Copy `/etc/blues-identity/config.yaml.sample` to
-`/etc/blues-identity/config.yaml` and confirm that idserver service starts. `sudo
-service idserver start`
+`/etc/blues-identity/config.yaml` and confirm that idserver service starts.
+On pre-xenial systems: `sudo service idserver start`
+For xenial and beyond: `sudo systemctl start blues-identity`
 
 If, in the process of checking, you find an error, fix it upstream and update
 the tag with `git -f <NEWVERSIONNUMBER>`. Do not forget to `git push -f` to get

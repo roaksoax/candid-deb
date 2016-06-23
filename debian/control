@@ -18,5 +18,4 @@ XS-Testsuite: autopkgtest
 
 Package: blues-identity
 Architecture: any
-Depends: distro-info, ${misc:Depends}, ${shlibs:Depends}
 Description: Identity management for The Blues service.
