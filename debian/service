@@ -1,0 +1,9 @@
+[Unit]
+Description=blues-identity
+
+[Service]
+Type=simple
+Restart=on-failure
+User=blues-identity
+Group=blues-identity
+ExecStart=/usr/bin/idserver /etc/blues-identity/config.yaml
