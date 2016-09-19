@@ -1,7 +1,10 @@
 ## Find the last release in blues-identity
 
 We tag release commits with lightweight tags. You can check the last release by
-running `git tag` and finding the largest version number.
+running `git tag | sort -V` and finding the largest version number.
+
+export tagname=<current largest tag>
+export newtag=<next semver>
 
 ## Generate changelog
 
@@ -21,7 +24,7 @@ In blues-identity-deb, use `dch` to add these to the `debian/changelog`. This
 command will start an `EDITOR` and allow you to write bullets into the
 `debian/changelog`.
 
-    dch -v <NEWVERSIONNUMBER> -D trusty
+    dch -v $newtag -D trusty
 
 Once done do not forget to make a pull request for the debian/changelog
 modifications on github.  After approved and merge, continue with the next steps.
@@ -36,8 +39,8 @@ Run these commands from the root of a`blues-identity-deb` branch.
     export GOPATH=$(pwd)
     cd src/github.com/CanonicalLtd/blues-identity
     git pull
-    git tag -a <NEWVERSIONNUMBER> -m "tag <NEWVERSIONNUMBER> for release"
-    git push origin <NEWVERSIONNUMBER>
+    git tag -a $newtag -m "tag $newtag for release"
+    git push origin $newtag
     cd $GOPATH
 
 ## run buildpackage.sh with the release argument
@@ -52,7 +55,7 @@ this package.
 Read the end output of this command carefully. If the previous step did not
 sign, then sign the dsc and changes file.
 
-    debsign ../blues-identity_<NEWVERSIONNUMBER>_source.changes
+    debsign ../blues-identity_$newtag_source.changes
 
 Signing may choose the wrong private key if you have multiple. Use the `-m`
 option to pick an email address and sign.
@@ -63,22 +66,25 @@ option to pick an email address and sign.
 
 ## Check Binary Package
 
-    dpkg-deb -c ../<package that was created>
-    sudo dpkg -i ../<package that was created>
+    dpkg-deb -c ../<package that was created>.deb
+    sudo dpkg -i ../<package that was created>.deb
 
-Check that executables run. Copy `/etc/blues-identity/config.yaml.sample` to
-`/etc/blues-identity/config.yaml` and confirm that idserver service starts.
-On pre-xenial systems: `sudo service idserver start`
-For xenial and beyond: `sudo systemctl start blues-identity`
+Check that executables run. 
+```
+cp /etc/blues-identity/config.yaml.sample /etc/blues-identity/config.yaml`
+```
+Start the service:
+Before xenial: `sudo service blues-identity start`
+Xenial and beyond: `sudo systemctl start blues-identity`
 
 If, in the process of checking, you find an error, fix it upstream and update
-the tag with `git -f <NEWVERSIONNUMBER>`. Do not forget to `git push -f` to get
+the tag with `git -f $newtag`. Do not forget to `git push -f` to get
 it to the remote.
 
 
 ## Upload to PPA
 
-    dput ppa:yellow/theblues-unstable ../blues-identity_<NEWVERSIONNUMBER>_source.changes
+    dput ppa:yellow/theblues-unstable ../blues-identity_$newtag_source.changes
 
 Once the packages are built, use launchpad to copy packages to the stable PPA.
 
