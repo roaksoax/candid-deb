@@ -80,7 +80,7 @@ gofmt -r "unknownVersion -> Version{GitCommit: \"${GIT_COMMIT}\", Version: \"${V
 dpkg-buildpackage -rfakeroot -F -us -uc
 dpkg-buildpackage -rfakeroot -S -us -uc
 
-CHANGESFILE=$(dpkg-parsechangelog | sed -rne 's,^Source: (.*),\1,p' )-$(dpkg-parsechangelog | sed -rne 's,^Version: (.*),\1,p')
+CHANGESFILE=$(dpkg-parsechangelog | sed -rne 's,^Source: (.*),\1,p' )_$(dpkg-parsechangelog | sed -rne 's,^Version: (.*),\1,p')_source.changes
 
 if [ -z "$NOSIGN" ]; then
 # dpkg-buildpackage doesn't prompt for passwork when signing.
