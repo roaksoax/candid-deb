@@ -9,7 +9,7 @@ We structure merge commit messages to be a short summary of the change. As such
 you can get a quick log of all the major changes since the last release with
 `git log`.
 
-    git log $tagname...HEAD --merges
+    git log $tagname...HEAD --author 'jujugui' --format='* [%h] %b'
 
 Use the output from that to update the changelog with the major changes of the
 release. You can verify that the changelog makes sense by also looking at the
