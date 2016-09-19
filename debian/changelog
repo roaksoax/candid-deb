@@ -1,3 +1,19 @@
+blues-identity (0.2.1) trusty; urgency=medium
+
+  * Use seconds not milliseconds in duration metric.
+  * Update to latest version of bakery.
+  * Add instrumentation.
+  * Update juju/testing to latest dep, update tests to copy sessions.
+  * Add discharge for token for user.
+  * internal/v1: Use httpbakery to provide discharge endpoints.
+  * all: update macaroon-bakery to v2-unstable.
+  * Allow agent to update their public keys.
+  * New LP Users need to have their groups set.
+  * Add support to add ssh keys for a user.
+  * Internal/v1: remove duplicates when returning group lists
+	
+ -- Bradley A. Crittenden <bac@canonical.com>  Mon, 19 Sep 2016 15:25:10 -0400
+
 blues-identity (0.2.0-1) trusty; urgency=medium
 
   * Add systemd services file. Change to deb only, no code change.
