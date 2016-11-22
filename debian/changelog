@@ -1,3 +1,37 @@
+blues-identity (0.2.2) trusty; urgency=medium
+
+  * [a16a7cf] internal/v1: support querying users by email address
+
+  Add an email parameter to the user query endpoint to support looking up
+  users by email.
+  * [55a0930] log debug message on metric count fail
+
+  If mongodb Count() call fails for a collection, log an error message.
+  * [12af6c9] idp/usso/ussodischarge: Add Ubuntu SSO discharge identity
+    provider
+
+    Add an identity provider that issues macaroons with third-party
+    caveats in Ubuntu SSO format. Login is completed when the discharge
+    macaroon is posted back to the identity provider.
+  * [809ec3c] internal/v1: Add group manipulation server methods
+
+    Add methods for managing groups to the server.
+  * [ad10d6b] internal/v1: retrieve launchpad group information upon request
+
+    Launchpad groups are currently retrieved when the user is created. This
+    change waits until the group information is required before retrieving
+    them. The group information stored with an identity now are groups that
+    are considered to be maintained outside of launchpad.
+  * [d1b39b2] all: update idmclient
+
+    Update the IDM client package to the latest version. idmclient no longer
+    supports basic authentication so this also adds support for an admin
+    agent login.
+  * [aec1eb3] User X is member of group X.
+  * [f1155f7] Add TLS support
+
+ -- Jay Wren <jay.wren@canonical.com>  Tue, 22 Nov 2016 14:12:30 -0500
+
 blues-identity (0.2.1) trusty; urgency=medium
 
   * Use seconds not milliseconds in duration metric.
