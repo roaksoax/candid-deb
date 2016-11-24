@@ -1,3 +1,10 @@
+blues-identity (0.2.3) trusty; urgency=medium
+
+  * config: add admin-agent-public-key
+  * internal/store: fix broken launchpad group request
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Thu, 24 Nov 2016 14:41:02 +0000
+
 blues-identity (0.2.2) trusty; urgency=medium
 
   * [a16a7cf] internal/v1: support querying users by email address
