@@ -19,6 +19,10 @@ override_dh_auto_install:
 	dh_install bin/idserver usr/bin/
 	cp src/github.com/CanonicalLtd/blues-identity/cmd/idserver/config.yaml config.yaml.sample
 	dh_install config.yaml.sample etc/blues-identity/
+	dh_install src/github.com/CanonicalLtd/blues-identity/static/favicon.ico usr/share/blues-identity/static/
+	dh_install src/github.com/CanonicalLtd/blues-identity/static/css/style.css usr/share/blues-identity/static/css
+	dh_install src/github.com/CanonicalLtd/blues-identity/templates/login usr/share/blues-identity/templates/
+	dh_install src/github.com/CanonicalLtd/blues-identity/templates/register usr/share/blues-identity/templates/
 	dh_auto_install
 
 override_dh_auto_clean:
