@@ -1,3 +1,25 @@
+blues-identity (0.2.5) trusty; urgency=medium
+
+  * Updated message on success page
+  * idp/openid: prevent registering reserved username
+  * Added body scroll and made the form wider. Fixes for Firefox widths
+  * internal/v1: support whoami endpoint
+  * idp/openid: add registration form
+  * idp/azure: use secure cookie for state information
+  * all: support templates and static files
+  * support domain cookies in discharger
+  * idp/azure: Add azure identity provider
+  * idp: rework IDP interface
+  * internal/store: remove identity UUID
+  * internal/v1: check for invalid usernames
+  * all tests now pass, with some new tests for authorization.
+  * all: update to use new bakery API
+  * Fix wrong log error and test for time.
+  * update bakery dependency
+  * idp/keystone: support v3 API for token authentication
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Wed, 01 Feb 2017 13:34:22 +0000
+
 blues-identity (0.2.4) trusty; urgency=medium
 
   * idp: simplify the IDP interface
