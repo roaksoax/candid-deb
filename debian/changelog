@@ -1,3 +1,10 @@
+blues-identity (0.2.7) trusty; urgency=medium
+
+  * internal/store: fix how launchpad groups are retrieved for users
+  * cmd/user-admin: add put-agent command
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Tue, 07 Feb 2017 13:03:18 +0000
+
 blues-identity (0.2.6) trusty; urgency=medium
 
   * store: more resilient prometheus monitoring of collections
