@@ -1,3 +1,12 @@
+blues-identity (0.2.8) trusty; urgency=medium
+
+  * internal/store: verify agent group access
+  * internal/v1: return empty array when a user has no groups
+  * internal/v1: allow specifying domain in third-party discharge
+    condition
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Thu, 16 Feb 2017 08:25:46 +0000
+
 blues-identity (0.2.7) trusty; urgency=medium
 
   * internal/store: fix how launchpad groups are retrieved for users
