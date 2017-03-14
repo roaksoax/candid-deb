@@ -1,3 +1,8 @@
+## Follow README.md instructions
+
+Before doing anything, follow the instructions in README.md
+to install the dependencies and run buildpackage.sh.
+
 ## Find the last release in blues-identity
 
 We tag release commits with lightweight tags. You can check the last release by
@@ -20,8 +25,9 @@ diff since the last release.
 
     git diff $tagname...HEAD
 
-In blues-identity-deb, use `dch` to add these to the `debian/changelog`. This
-command will start an `EDITOR` and allow you to write bullets into the
+In blues-identity-deb, use `dch` (available via `apt install devscripts`)
+to add these to the `debian/changelog`. This command
+will start an `EDITOR` and allow you to write bullets into the
 `debian/changelog`.
 
     dch -v $newtag -D trusty
