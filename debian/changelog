@@ -1,10 +1,17 @@
+blues-identity (0.2.10) trusty; urgency=medium
+
+  * meeting: add wait timeout
+  * internal/store: reuse mongo sessions better
+
+ -- Martin Hilton <martin.hilton@canonical.com>  Mon, 25 Sep 2017 15:30:07 +0100
+
 blues-identity (0.2.9) trusty; urgency=medium
 
   * internal/v1: do not use macaroons from wrong domain
   * cmd/user-admin: add show command to show user details
   * idp/usso: provide clearer error message for incomplete users
 
- -- Roger Peppe <roger.peppe@canonical.com> Tue, 14 Mar 2017 11:18:14 +0000
+ -- Roger Peppe <roger.peppe@canonical.com>  Tue, 14 Mar 2017 11:18:14 +0000
 
 blues-identity (0.2.8) trusty; urgency=medium
 
