@@ -1,3 +1,9 @@
+blues-identity (0.2.11) trusty; urgency=medium
+
+  * meeting: do not remove item after wait timeout
+
+ -- Roger Peppe <roger.peppe@canonical.com>  Tue, 21 Nov 2017 11:15:52 +0000
+
 blues-identity (0.2.10) trusty; urgency=medium
 
   * meeting: add wait timeout
