@@ -40,19 +40,19 @@ done
 : ${TARGETPPA:=ppa:yellow/theblues-unstable}
 
 export GOPATH=$(pwd)
-VERSION=$(sed -n -e '/^blues-identity/ {s/^blues-identity (\([0-9\.]*\).*$/\1/p; q}' debian/changelog)
+VERSION=$(sed -n -e '/^candid/ {s/^candid (\([0-9\.]*\).*$/\1/p; q}' debian/changelog)
 
 if [ -z "$RELEASE" ]; then
 
-# Get blues-identity using git clone.
+# Get candid using git clone.
 mkdir -p src/github.com/CanonicalLtd
 cd src/github.com/CanonicalLtd
-if [ -d blues-identity ] ; then
-    cd blues-identity
+if [ -d candid ] ; then
+    cd candid
     git pull
 else
-    git clone git@github.com:CanonicalLtd/blues-identity.git blues-identity
-    cd blues-identity
+    git clone git@github.com:CanonicalLtd/candid.git candid
+    cd candid
 fi
 
 # Get the short hash of the most recent commit for versioning.
@@ -65,14 +65,14 @@ dch -v ${VERSION} 'autobuild: new commit' -D trusty --check-dirname-level=0
 fi
 
 # Get all the dependent go source.
-make -C $GOPATH/src/github.com/CanonicalLtd/blues-identity deps
+make -C $GOPATH/src/github.com/CanonicalLtd/candid deps
 
-go test github.com/CanonicalLtd/blues-identity/...
+go test github.com/CanonicalLtd/candid/...
 
 cd $GOPATH
 
-GIT_COMMIT=`git --git-dir ${GOPATH}/src/github.com/CanonicalLtd/blues-identity/.git rev-parse --verify HEAD`
-PKG=github.com/CanonicalLtd/blues-identity
+GIT_COMMIT=`git --git-dir ${GOPATH}/src/github.com/CanonicalLtd/candid/.git rev-parse --verify HEAD`
+PKG=github.com/CanonicalLtd/candid
 VERSION_PKG=${PKG}/version
 gofmt -r "unknownVersion -> Version{GitCommit: \"${GIT_COMMIT}\", Version: \"${VERSION}\",}" ${GOPATH}/src/${VERSION_PKG}/init.go.tmpl > ${GOPATH}/src/${VERSION_PKG}/init.go
 

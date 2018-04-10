@@ -1,4 +1,4 @@
-Source: blues-identity
+Source: candid
 Section: devel
 Priority: extra
 Maintainer: Rick Harding <rick.harding@canonical.com>
@@ -13,9 +13,11 @@ Build-Depends: debhelper (>= 7.0.50~),
                mercurial,
                debhelper,
 Standards-Version: 3.9.5
-Homepage: http://github.com/CanonicalLtd/blues-identity
+Homepage: http://github.com/CanonicalLtd/candid
 XS-Testsuite: autopkgtest
 
-Package: blues-identity
+Package: candid
 Architecture: any
-Description: Identity management for The Blues service.
+Description: Canonical Identity Service
+ The Canonical Identity service provides a macaroon-based authentication
+ against external identity providers.

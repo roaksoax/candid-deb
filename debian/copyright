@@ -1,10 +1,10 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: blues-identity
-Source: https://github.com/CanonicalLtd/blues-identity
-Copyright: 2014 Canonical Ltd.
+Upstream-Name: candid
+Source: https://github.com/CanonicalLtd/candid
+Copyright: 2014-2018 Canonical Ltd.
 Comment:
- The blues-identity source package includes a number of other
- upstream projects in addition to blues-identity itself.
+ The candid source package includes a number of other
+ upstream projects in addition to candid itself.
  .
  This reflects the static linking approach taken in Go as
  all dependencies are linked in at build time.
@@ -29,6 +29,14 @@ Comment:
  of dep5 as closely as possible without making it too difficult to keep
  this file maintained. This use does not appear to be in violation of
  dep5.
+
+Files: *
+Copyright: 2018 Canonical Ltd.
+License: AGPL-3.0+
+
+Files: debian/*
+Copyright: 2018 Canonical Ltd.
+License: AGPL-3.0+
 
 Files: src/code.google.com/p/go.crypto/*
 Comment: Last verified commit 5478be1963aafa9025e9bf0837aff6013eb92e5b
@@ -293,3 +301,17 @@ License: LGPL-3+
  On Debian systems, the full text of the GNU Lesser General Public
  License version 3 can be found in the file
  `/usr/share/common-licenses/LGPL-3'.
+
+License: AGPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Affero General Public License for more details.
+ .
+ You should have received a copy of the GNU Affero General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
