@@ -60,7 +60,7 @@ SHORTHASH=$(git log -1 --pretty=format:%h)
 
 # Update the debian/changelog file.
 VERSION=${VERSION}+$(date -u +%Y%m%d%H%M)-${SHORTHASH}
-dch -v ${VERSION} 'autobuild: new commit' -D trusty --check-dirname-level=0
+dch -v ${VERSION} 'autobuild: new commit' -D bionic --check-dirname-level=0
 
 fi
 

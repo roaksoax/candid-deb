@@ -1,18 +1,18 @@
-blues-identity debian package source
+candid debian package source
 ====================================
 
-This repository contains only the debian packaging part of blues-identity.
+This repository contains only the debian packaging part of candid.
 
 ## Installing Packages
 
  1. Login to launchpad and go to https://launchpad.net/~/+archivesubscriptions
  1. Click the `View` link for `theblues` or `theblues-unstable`
  1. Follow the instructions to add the PPA
- 1. sudo apt-get update ; sudo apt-get install blues-identity
+ 1. sudo apt-get update ; sudo apt-get install candid
 
 ## Build Dependencies
 
-Package building requirements are the same as blues-identity.
+Package building requirements are the same as candid.
 
 Build dependencies are specified in debian/control, but if they change and
 the source packages are not yet in a PPA, then `apt-get build-dep` will not
@@ -91,7 +91,7 @@ the binaries yourself.
 
  1. Include the deb-src line in the PPA configuration.
    - See `Installing Packages` above.
- 1. `apt-get source blues-identity`
+ 1. `apt-get source candid`
  1. Inspect the source which was just downloaded.
 
 ### Verifying Using Binaries
@@ -99,7 +99,7 @@ the binaries yourself.
  1. Find a difference which you expect to be in the binary using git diff.
    - e.g. `git diff 0.1.0..0.1.1`
 
-     https://github.com/CanonicalLtd/blues-identity/compare/0.1.0...0.1.1
+     https://github.com/CanonicalLtd/candid/compare/0.1.0...0.1.1
 
    - Look for an easy difference such as a new package level symbol. e.g.
      entityExists endpoint added
@@ -108,7 +108,7 @@ the binaries yourself.
     ```
     $ strings /usr/bin/idserver | grep entityExists
     ...
-    github.com/CanonicalLtd/blues-identity/internal/v1.(*Handler).entityExists
+    github.com/CanonicalLtd/candid/internal/v1.(*Handler).entityExists
     ...
     ```
     The symbol is listed, so this binary must be built from the right tag  (or
@@ -116,4 +116,4 @@ the binaries yourself.
 
     Another possibility is that the symbol is not there, but this does not
     necessarily mean that an older version of library was used. Study the very
-    short diff between 0.1.0 and 0.2.0 in github.com/CanonicalLtd/blues-identity.
+    short diff between 0.1.0 and 0.2.0 in github.com/CanonicalLtd/candid.
