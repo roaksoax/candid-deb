@@ -1,32 +1,8 @@
-candid (0.2.11+201804101500-3fd821d) trusty; urgency=medium
+candid (0.2.11+201804102234-3fd821d) trusty; urgency=medium
 
   * autobuild: new commit
 
- -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 11:00:12 -0400
-
-candid (0.2.11+201804101452-3fd821d) trusty; urgency=medium
-
-  * autobuild: new commit
-
- -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 10:52:10 -0400
-
-candid (0.2.11+201804101442-3fd821d) trusty; urgency=medium
-
-  * autobuild: new commit
-
- -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 10:42:56 -0400
-
-candid (0.2.11+201804101417-3fd821d) trusty; urgency=medium
-
-  * autobuild: new commit
-
- -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 10:17:09 -0400
-
-candid (0.2.11+201804101406-3fd821d) trusty; urgency=medium
-
-  * autobuild: new commit
-
- -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 10:06:10 -0400
+ -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 18:34:50 -0400
 
 candid (0.2.11) trusty; urgency=medium
 
