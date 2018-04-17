@@ -9,24 +9,24 @@
 
 . /usr/share/debconf/confmodule
 
-# creating blues-identity group if he isn't already there
-if ! getent group blues-identity >/dev/null; then
-    # Adding system group: blues-identity.
-    addgroup --system blues-identity >/dev/null
+# creating candid group if he isn't already there
+if ! getent group candid >/dev/null; then
+    # Adding system group: candid.
+    addgroup --system candid >/dev/null
 fi
 
-# creating blues-identity user if he isn't already there
-if ! getent passwd blues-identity >/dev/null; then
-    # Adding system user: blues-identity.
+# creating candid user if he isn't already there
+if ! getent passwd candid >/dev/null; then
+    # Adding system user: candid.
     adduser \
       --system \
           --disabled-login \
-      --ingroup blues-identity \
+      --ingroup candid \
       --gecos "identity server" \
       --shell /bin/false \
-      blues-identity  >/dev/null
+      candid  >/dev/null
 fi
 
 # create log dir
 mkdir -p /var/log/identity
-chown blues-identity:blues-identity /var/log/identity
+chown candid:candid /var/log/identity

@@ -1,0 +1,6 @@
+if [ -x "/etc/init.d/candid" ]; then
+	update-rc.d candid defaults >/dev/null
+fi
+if [ -x "/etc/init.d/candid" ] || [ -e "/etc/init/candid.conf" ] && [ -r /etc/candid/config.yaml ] ; then
+	invoke-rc.d candid start || exit $?
+fi

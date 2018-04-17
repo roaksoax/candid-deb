@@ -12,17 +12,17 @@ export PATH:=$(GOPATH)/bin:$(PATH)
 COMMON_FLAGS:= -x -v
 
 override_dh_auto_install:
-	go install $(COMMON_FLAGS) github.com/CanonicalLtd/blues-identity/cmd/idserver
+	go install $(COMMON_FLAGS) github.com/CanonicalLtd/candid/cmd/candidsrv
 	# It is tempting to run go test here. However, that would require the
 	# PPA build server to install mongodb. Instead, go test is run in 
 	# buildpackage.sh before building the source package.
-	dh_install bin/idserver usr/bin/
-	cp src/github.com/CanonicalLtd/blues-identity/cmd/idserver/config.yaml config.yaml.sample
-	dh_install config.yaml.sample etc/blues-identity/
-	dh_install src/github.com/CanonicalLtd/blues-identity/static/favicon.ico usr/share/blues-identity/static/
-	dh_install src/github.com/CanonicalLtd/blues-identity/static/css/style.css usr/share/blues-identity/static/css
-	dh_install src/github.com/CanonicalLtd/blues-identity/templates/login usr/share/blues-identity/templates/
-	dh_install src/github.com/CanonicalLtd/blues-identity/templates/register usr/share/blues-identity/templates/
+	dh_install bin/candidsrv usr/bin/
+	cp src/github.com/CanonicalLtd/candid/cmd/candidsrv/config.yaml config.yaml.sample
+	dh_install config.yaml.sample etc/candid/
+	dh_install src/github.com/CanonicalLtd/candid/static/favicon.ico usr/share/candid/static/
+	dh_install src/github.com/CanonicalLtd/candid/static/css/style.css usr/share/candid/static/css
+	dh_install src/github.com/CanonicalLtd/candid/templates/login usr/share/candid/templates/
+	dh_install src/github.com/CanonicalLtd/candid/templates/register usr/share/candid/templates/
 	dh_auto_install
 
 override_dh_auto_clean:

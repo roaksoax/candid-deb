@@ -1,9 +1,9 @@
 [Unit]
-Description=blues-identity
+Description=candid
 
 [Service]
 Type=simple
 Restart=on-failure
-User=blues-identity
-Group=blues-identity
-ExecStart=/usr/bin/idserver /etc/blues-identity/config.yaml
+User=candid
+Group=candid
+ExecStart=/usr/bin/candidsrv /etc/candid/config.yaml
