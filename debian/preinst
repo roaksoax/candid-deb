@@ -1,13 +1,6 @@
-#!/bin/bash -e
-##
-## summary of how this script can be called:
-##        * <new-preinst> install
-##        * <new-preinst> install <old-version>
-##        * <new-preinst> upgrade <old-version>
-##        * <old-preinst> abort-upgrade <new-version>
-##
+#!/bin/sh
 
-. /usr/share/debconf/confmodule
+set -e
 
 # creating candid group if he isn't already there
 if ! getent group candid >/dev/null; then
@@ -22,11 +15,16 @@ if ! getent passwd candid >/dev/null; then
       --system \
           --disabled-login \
       --ingroup candid \
-      --gecos "identity server" \
+      --gecos "Canonical Identity server" \
       --shell /bin/false \
+      --no-create-home --home /nonexistent \
       candid  >/dev/null
 fi
 
 # create log dir
 mkdir -p /var/log/identity
 chown candid:candid /var/log/identity
+
+#DEBHELPER#
+
+exit 0

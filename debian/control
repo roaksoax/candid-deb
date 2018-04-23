@@ -1,23 +1,20 @@
 Source: candid
 Section: devel
-Priority: extra
-Maintainer: Rick Harding <rick.harding@canonical.com>
-Build-Depends: debhelper (>= 7.0.50~),
-               gccgo-go [!amd64 !i386 !armhf],
-               golang-go (>= 2:1.2) [amd64 i386 armhf],
-               lsb-release,
-               build-essential,
-               devscripts,
-               git,
-               bzr,
-               mercurial,
-               debhelper,
-Standards-Version: 3.9.5
-Homepage: http://github.com/CanonicalLtd/candid
-XS-Testsuite: autopkgtest
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Rick Harding <rick.harding@canonical.com>
+Build-Depends: debhelper (>= 11),
+               gccgo-go [!amd64 !i386 !armhf !arm64 !ppc64el !s390x],
+               golang-go (>= 2:1.2) [amd64 i386 armhf arm64 ppc64el s390x],
+               lsb-release
+Standards-Version: 4.1.4
+Homepage: https://github.com/CanonicalLtd/candid
 
 Package: candid
 Architecture: any
+Depends: adduser, ${misc:Depends}, ${shlibs:Depends}
 Description: Canonical Identity Service
- The Canonical Identity service provides a macaroon-based authentication
- against external identity providers.
+ The Canonical Identity server provides a macaroon-based authentication
+ service against external identity providers.
+ .
+ This package contains the Candid daemon.

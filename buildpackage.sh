@@ -40,7 +40,7 @@ done
 : ${TARGETPPA:=ppa:yellow/theblues-unstable}
 
 export GOPATH=$(pwd)
-VERSION=$(sed -n -e '/^candid/ {s/^candid (\([0-9\.]*\).*$/\1/p; q}' debian/changelog)
+VERSION=$(sed -n -e '/^candid/ {s/^candid (\([0-9\.]*[~a-z0-9]*\).*$/\1/p; q}' debian/changelog)
 
 if [ -z "$RELEASE" ]; then
 

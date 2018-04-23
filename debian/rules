@@ -12,30 +12,30 @@ export PATH:=$(GOPATH)/bin:$(PATH)
 COMMON_FLAGS:= -x -v
 
 override_dh_auto_install:
-	go install $(COMMON_FLAGS) github.com/CanonicalLtd/candid/cmd/candidsrv
+	go install $(COMMON_FLAGS) \
+		github.com/CanonicalLtd/candid/cmd/candidsrv \
+		github.com/CanonicalLtd/candid/cmd/candid
 	# It is tempting to run go test here. However, that would require the
-	# PPA build server to install mongodb. Instead, go test is run in 
+	# PPA build server to install mongodb. Instead, go test is run in
 	# buildpackage.sh before building the source package.
-	dh_install bin/candidsrv usr/bin/
+	dh_install bin/candidsrv usr/sbin/
+	dh_install bin/candid usr/bin/
 	cp src/github.com/CanonicalLtd/candid/cmd/candidsrv/config.yaml config.yaml.sample
 	dh_install config.yaml.sample etc/candid/
-	dh_install src/github.com/CanonicalLtd/candid/static/favicon.ico usr/share/candid/static/
-	dh_install src/github.com/CanonicalLtd/candid/static/css/style.css usr/share/candid/static/css
-	dh_install src/github.com/CanonicalLtd/candid/templates/login usr/share/candid/templates/
-	dh_install src/github.com/CanonicalLtd/candid/templates/register usr/share/candid/templates/
+	dh_install src/github.com/CanonicalLtd/candid/static/ usr/share/candid/
+	dh_install src/github.com/CanonicalLtd/candid/templates/ usr/share/candid/
 	dh_auto_install
 
 override_dh_auto_clean:
 	rm -rf pkg bin
 	dh_auto_clean
 
-# Don't strip golang compiled binaries as this does
-# not function correctly
-override_dh_strip:
-	:
-
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
 
 override_dh_gencontrol:
 	dh_gencontrol -- $(DB_DEP)
+
+# Override as we don't ship a init.d script
+override_dh_installinit:
+	:

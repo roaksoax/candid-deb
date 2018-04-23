@@ -1,9 +1,13 @@
+[Install]
+WantedBy=multi-user.target
+
 [Unit]
-Description=candid
+Description=Canonical Identity Server
+Documentation=https://github.com/CanonicalLtd/candid/
 
 [Service]
 Type=simple
 Restart=on-failure
 User=candid
 Group=candid
-ExecStart=/usr/bin/candidsrv /etc/candid/config.yaml
+ExecStart=/usr/sbin/candidsrv /etc/candid/config.yaml

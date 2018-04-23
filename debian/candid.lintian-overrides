@@ -1,0 +1,15 @@
+# No manpages available
+candid: binary-without-manpage usr/bin/candid
+candid: binary-without-manpage usr/sbin/candidsrv
+
+# Come from an external source.
+candid: spelling-error-in-binary usr/bin/candid wiH with
+candid: spelling-error-in-binary usr/sbin/candidsrv wiH with
+
+# Come from an external source.
+candid: hardening-no-pie usr/bin/candid
+candid: hardening-no-relro usr/bin/candid
+candid: hardening-no-bindnow usr/bin/candid
+candid: hardening-no-pie usr/sbin/candidsrv
+candid: hardening-no-relro usr/sbin/candidsrv
+candid: hardening-no-bindnow usr/sbin/candidsrv

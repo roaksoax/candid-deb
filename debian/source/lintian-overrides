@@ -1,0 +1,10 @@
+# Comes from external source
+source: source-contains-unsafe-symlink src/github.com/prometheus/procfs/fixtures/26231/exe
+
+# Examples are not needed
+candid source: package-does-not-install-examples src/github.com/garyburd/go-oauth/examples/
+candid source: package-does-not-install-examples src/github.com/pquerna/cachecontrol/examples/
+candid source: package-does-not-install-examples src/github.com/prometheus/client_golang/examples/
+
+# Included in debian/copyrigh
+candid source: missing-notice-file-for-apache-license src/github.com/prometheus/client_golang/NOTICE

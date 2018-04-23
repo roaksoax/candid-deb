@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    purge)
+        # Delete user/group
+        if getent passwd candid >/dev/null; then
+            deluser candid || true
+            delgroup candid || true
+        fi
+
+        # Delete log dir
+        rm -rf /var/log/identity
+esac
+
+#DEBHELPER#

@@ -1,5 +1,5 @@
-candid (0.2.11) bionic; urgency=medium
+candid (1.0.0~alpha+201804191824-24b36a9-0ubuntu1) bionic; urgency=medium
 
-  * Pre-release version
+  * Initial release (LP: #1765476)
 
- -- Andres Rodriguez <andreserl@ubuntu.com>  Tue, 10 Apr 2018 18:34:50 -0400
+ -- Andres Rodriguez <andreserl@ubuntu.com>  Thu, 19 Apr 2018 14:30:51 -0400

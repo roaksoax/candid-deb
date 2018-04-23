@@ -1,4 +1,4 @@
-Format: http://dep.debian.net/deps/dep5
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: candid
 Source: https://github.com/CanonicalLtd/candid
 Copyright: 2014-2018 Canonical Ltd.
@@ -24,11 +24,10 @@ Comment:
  file, since different files have different template replacements, and
  the licenses require that the original text be reproduced. This means
  that the standard short names cannot be used, since then the text would
- have to be the same. Instead, this file uses names like
- BSD-2-clause+Apple and BSD-3-clause+Google to try and retain the intent
- of dep5 as closely as possible without making it too difficult to keep
- this file maintained. This use does not appear to be in violation of
- dep5.
+ have to be the same. Instead, this file uses names like BSD-3-clause+Google
+ to try and retain the intent of dep5 as closely as possible without
+ making it too difficult to keep this file maintained. This use does
+ not appear to be in violation of dep5.
 
 Files: *
 Copyright: 2018 Canonical Ltd.
@@ -37,11 +36,6 @@ License: AGPL-3.0+
 Files: debian/*
 Copyright: 2018 Canonical Ltd.
 License: AGPL-3.0+
-
-Files: src/code.google.com/p/go.crypto/*
-Comment: Last verified commit 5478be1963aafa9025e9bf0837aff6013eb92e5b
-Copyright: 2009-2014, The Go Authors
-License: BSD-3-clause+Google
 
 Files: src/github.com/juju/errors/*
 Comment: Last verified commit 09734a904adc602da4334cbf29cb4515fbeb8feb
@@ -95,25 +89,29 @@ Comment: Last verified commit dc255bb679efa273b6544a03261c4053505498a4
 Copyright: 2010-2014 - Gustavo Niemeyer <gustavo@niemeyer.net>
 License: BSD-2-clause
 
-Files: src/gopkg.in/yaml.v1/*
+Files: src/gopkg.in/yaml.v2/*
 Comment: Last verified commit 1418a9bc452f9cf4efa70307cafcb10743e64a56
  Upstream is Gustavo Niemeyer, https://github.com/go-yaml/yaml
  Copyright statement taken from upstream HEAD, since the version used
  in these sources erroneously omitted the statement, and it has since
  been corrected.
-Copyright: 2011-2014 Canonical Inc.
-License: LGPL-3 with linking exception
+Copyright: 2011-2016 Canonical Inc.
+License: Apache-2.0
 
-Files: src/gopkg.in/yaml.v1/apic.go
-       src/gopkg.in/yaml.v1/emitterc.go
-       src/gopkg.in/yaml.v1/parserc.go
-       src/gopkg.in/yaml.v1/readerc.go
-       src/gopkg.in/yaml.v1/scannerc.go
-       src/gopkg.in/yaml.v1/writerc.go
-       src/gopkg.in/yaml.v1/yamlh.go
-       src/gopkg.in/yaml.v1/yamlprivateh.go
+Files: src/gopkg.in/yaml.v2/apic.go
+       src/gopkg.in/yaml.v2/emitterc.go
+       src/gopkg.in/yaml.v2/parserc.go
+       src/gopkg.in/yaml.v2/readerc.go
+       src/gopkg.in/yaml.v2/scannerc.go
+       src/gopkg.in/yaml.v2/writerc.go
+       src/gopkg.in/yaml.v2/yamlh.go
+       src/gopkg.in/yaml.v2/yamlprivateh.go
 Copyright: 2006 Kirill Simonov
 License: Expat
+
+Files: src/github.com/prometheus/*
+Copyright: 2012-2015 The Prometheus Authors
+License: Apache-2.0
 
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -149,28 +147,6 @@ License: BSD-2-clause
  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-License: BSD-2-clause+Apple
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are met:
- .
- 1. Redistributions of source code must retain the above copyright notice,
- this list of conditions and the following disclaimer.
- .
- 2. Redistributions in binary form must reproduce the above copyright notice,
- this list of conditions and the following disclaimer in the documentation
- and/or other materials provided with the distribution.
- .
- THIS SOFTWARE IS PROVIDED BY APPLE INC. AND ITS CONTRIBUTORS "AS IS" AND ANY
- EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- DISCLAIMED. IN NO EVENT SHALL APPLE INC. OR ITS CONTRIBUTORS BE LIABLE FOR ANY
- DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
@@ -244,22 +220,6 @@ License: Expat
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-
-License: LGPL-3
- This program is free software: you can redistribute it and/or modify it under
- the terms of the GNU Lesser General Public License as published by the Free
- Software Foundation, version 3.
- .
- This program is distributed in the hope that it will be useful, but WITHOUT ANY
- WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
- PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
- .
- See both COPYING and COPYING.LESSER for the full terms of the GNU Lesser
- General Public License.
- .
- On Debian systems, the full text of the GNU Lesser General Public
- License version 3 can be found in the file
- `/usr/share/common-licenses/LGPL-3'.
 
 License: LGPL-3 with linking exception
  This software is licensed under the LGPLv3, included below.
